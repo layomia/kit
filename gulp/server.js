@@ -21,6 +21,7 @@ function browserSyncInit(baseDir, browser) {
     };
   }
 
+
   var server = {
     baseDir: baseDir,
     routes: routes
@@ -38,7 +39,8 @@ function browserSyncInit(baseDir, browser) {
   browserSync.instance = browserSync.init({
     startPath: '/',
     server: server,
-    browser: browser
+    browser: browser,
+    port: process.env.PORT || 5000
   });
 }
 
