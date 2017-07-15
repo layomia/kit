@@ -1,0 +1,23 @@
+<div class="container">
+  <form>
+    <div>
+      First Name: <input type="text" ng-model="signup.registrationForm.firstName">
+    </div>
+    <div>
+      Last Name: <input type="text" ng-model="signup.registrationForm.lastName">
+    </div>
+    <div>
+      Email: <input type="email" ng-model="signup.registrationForm.email">
+    </div>
+    <div>
+      Password: <input type="password" ng-model="signup.registrationForm.password">
+    </div>
+    <div>
+      Password: <input type="password" ng-model="signup.registrationForm.password_confirmation">
+    </div>
+    <div>
+      Date of Birth: <input type="date" ng-model="signup.registrationForm.dateOfBirth">
+    </div>
+    <button ng-click="signup.attemptSignUp()">Sign Up</button>
+  </form>
+</div>
