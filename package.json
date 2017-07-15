@@ -47,7 +47,7 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
-    "heroku-postbuild":"bower install"
+    "postinstall": "bower install"
   },
   "devDependencies": {
     "estraverse": "~4.1.0",
