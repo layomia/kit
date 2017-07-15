@@ -51,7 +51,7 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
-    "build": "grunt dist",
+    "build": "gulp build",
     "postinstall": "bower install && npm run build"
   },
   "devDependencies": {
