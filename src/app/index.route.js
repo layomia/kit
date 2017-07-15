@@ -8,11 +8,11 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      .state('splash', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        templateUrl: 'app/splash/splash.html',
+        controller: 'SplashController',
+        controllerAs: 'splash'
       })
       .state('login', {
         url:'/login',

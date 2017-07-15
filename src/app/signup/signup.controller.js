@@ -6,7 +6,7 @@
     .controller('SignupController', SignupController);
 
   /** @ngInject */
-  function SignupController($timeout, $auth) {
+  function SignupController($timeout, $auth, $scope) {
     var vm = this;
     vm.registrationForm = {};
 
@@ -21,6 +21,5 @@
           alert("Unable to log you in now! Try again later!")
         });
     };
-
   }
 })();
