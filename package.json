@@ -51,7 +51,8 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
-    "postinstall": "bower install"
+    "build": "grunt dist",
+    "postinstall": "bower install && npm run build"
   },
   "devDependencies": {
     "estraverse": "~4.1.0",
