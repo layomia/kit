@@ -13,17 +13,24 @@
 
 <div class="row">
   <div class="card card-form">
-  <h2 class="card-title">What do you want to donate?</h2>
-  <form>
-    <div>
-      <h4 class="form-label">Title</h4>
-      <input type="text" ng-model="sell.sellForm.name">
+    <h2 class="card-title">What do you want to donate?</h2>
+      <form>
+        <div>
+          <h4 class="form-label">Title</h4>
+          <input type="text" ng-model="sell.sellForm.name">
+        </div>
+        <div>
+          <h4 class="form-label">Condition</h4>
+          <input type="text" ng-model="sell.sellForm.condition">
+        </div>
+        <div>
+          <h4 class="form-label">Cause</h4>
+          <select ng-model="sell.sellForm.cause_id">
+            <option ng-repeat="(key, value) in sell.causes" value="{{value}}">{{key}}</option>
+          </select>
+
+        </div>
+        <button class="btn btn-full" ng-click="sell.attemptSale()">Donate</button>
+      </form>
     </div>
-    <div>
-      <h4 class="form-label">Condition</h4>
-<input type="text" ng-model="sell.sellForm.condition">
-    </div>
-    <button class="btn btn-full" ng-click="sell.attemptSale()">Donate</button>
-  </form>
-</div>
 </div>
