@@ -10,6 +10,11 @@ angular.module('artifactService', [])
       return $http.get(artifactRoute + '/' + id);
     };
 
+    // get a particular user's artifacts
+    artifactFactory.getForUser = function(id) {
+      return $http.get("https://kitbackend.herokuapp.com/api/users/" + id + "/artifact_requests");
+    }
+
     // get all artifacts
     artifactFactory.all = function() {
       return $http.get(artifactRoute + '/');

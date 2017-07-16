@@ -1,0 +1,9 @@
+<p>Dashboard</p>
+<p>Your items</p>
+
+<ul>
+  <li ng-repeat="artifact in user.pageUserArtifacts">
+    <p>{{artifact.name}}</p>
+    <p>{{artifact.bids.length}} bids</p>
+  </li>
+</ul>

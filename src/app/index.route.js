@@ -45,6 +45,12 @@
         templateUrl: 'app/artifact/artifact.html',
         controller: 'ArtifactController',
         controllerAs: 'artifact'
+      })
+      .state('user', {
+        url:'/user/:id',
+        templateUrl: 'app/user/user.html',
+        controller: 'UserController',
+        controllerAs: 'user'
       });
 
     $urlRouterProvider.otherwise('/')
