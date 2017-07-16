@@ -5,7 +5,12 @@ angular.module('generalService', [])
     return Object.keys(userInfo.get()).length;
   }
 
+	function currentUser() {
+		return userInfo.get();
+	}
+
 	return {
 		userLoggedIn: userLoggedIn,
+		currentUser: currentUser
 	}
 });
