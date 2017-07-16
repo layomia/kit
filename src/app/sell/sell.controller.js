@@ -14,7 +14,7 @@
       $location.path("/");
     }
 
-    vm.sellForm = {}
+    vm.sellForm = {};
 
     vm.causes = ["cause1", "cause2", "cause3", "cause4"];
 

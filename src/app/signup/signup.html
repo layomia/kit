@@ -24,6 +24,13 @@
         <input type="email" ng-model="signup.registrationForm.email">
       </div>
       <div>
+        <h4 class="form-label">Community</h4>
+        <select ng-model="signup.registrationForm.community_id">
+          <option ng-repeat="(key, value) in signup.communities" value="{{value}}">{{key}}</option>
+        </select>
+
+      </div>
+      <div>
         <h4 class="form-label">Password</h4>
       <input type="password" ng-model="signup.registrationForm.password">
       </div>

@@ -6,9 +6,18 @@
     .controller('SignupController', SignupController);
 
   /** @ngInject */
-  function SignupController($timeout, $auth, $scope) {
+  function SignupController($timeout, $auth, $scope, Community) {
     var vm = this;
     vm.registrationForm = {};
+    vm.communities = {};
+
+    Community.all()
+      .success(function(data) {
+        for (var x in data) {
+          vm.communities[data[x]["name"]] = data[x]["id"];
+        }
+        console.log(vm.communities);
+      })
 
     vm.attemptSignUp = function() {
       $auth.submitRegistration(vm.registrationForm)

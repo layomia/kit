@@ -3,7 +3,7 @@ angular.module('communityService', [])
 
     // create a new object
     var communityFactory = {};
-    var communityRoute = "https://kitbackend.herokuapp.com/api/communities";
+    var communityRoute = "https://kitbackend.herokuapp.com/api/community";
 
     // get a single community
     communityFactory.get = function(id) {
