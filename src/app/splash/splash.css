@@ -6,12 +6,29 @@
   color: #fff;
 }
 
+.header1 {
+  background-image:  url(/assets/images/main1.svg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #000;
+}
+
+.header2 {
+  background-image:  url(/assets/images/main2.svg);
+  background-position: 50%;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  padding-top: 60px;
+}
+
 .splash-text-box {
   position: absolute;
   width: 1140px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
 }
 
 .logo {
@@ -47,7 +64,7 @@
 
 .landing-nav-ul li a:active,
 .landing-nav-ul li a:hover {
-  border-bottom: 2px solid #27AE60;
+  border-bottom: 2px solid #fff;
   cursor: pointer;
 }
 
@@ -56,4 +73,18 @@
   width: 70%;
   margin-left: 15%;
   margin-bottom: 75px;
+}
+
+.brand-text-splash {
+  position: absolute;
+  transform: translateY(50%);
+  padding: 8px 0;
+  font-family: 'Pacifico', cursive;
+  font-size: 150%;
+  color:#fff;
+}
+
+.header3 {
+  width: 600px;
+  margin:0 auto;
 }
