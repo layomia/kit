@@ -1,0 +1,45 @@
+.artifact-container {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.artifact-image {
+  width: 400px;
+  height: 400px;
+}
+
+.artifact-name {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.artifact-info {
+  margin: 10px auto;
+}
+
+.artifact-form {
+  margin-left: 0 !important;
+}
+
+.other-items {
+  margin-top: 50px;
+}
+
+.offer-list {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+.offers-heading {
+  text-align: center;
+}
+
+.item-list-artifact{
+  height: 950px !important;
+}
+
+.artifact-offer-image {
+  border-radius: 50%;
+}

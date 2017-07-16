@@ -90,3 +90,12 @@
 	font-size: 70%;
 	margin-bottom: 10px;
 }
+
+
+.main-page-content {
+  background-image: url(/assets/images/main-footer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 600px;
+}

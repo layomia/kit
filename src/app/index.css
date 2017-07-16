@@ -18,6 +18,13 @@ html {
   margin: 0 auto;
 }
 
+.ng-enter {
+  animation: slideInLeft 1s both ease-in; z-index: 8888;
+}
+.ng-leave {
+  animation: fadeOutRight 1s both ease-out; z-index: 9999;
+}
+
 h1 {
   margin: 0;
   font-size: 220%;
@@ -108,6 +115,7 @@ h3 {
 
 .card {
   box-shadow: 10px 2px 30px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255,255,255,0.9);
 }
 
 .card-form {
@@ -155,4 +163,12 @@ button {
   background-color: #27AE60;
   border: 1px solid #27AE60;
   color: #fff;
+}
+
+.page-content {
+  background-image: url(/assets/images/footer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 600px;
 }

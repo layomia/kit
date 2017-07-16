@@ -41,17 +41,18 @@
         controllerAs: 'sell'
       })
       .state('artifact', {
-        url:'/artifact/:id',
+        url: '/artifact/:id',
         templateUrl: 'app/artifact/artifact.html',
         controller: 'ArtifactController',
-        controllerAs: 'artifact'
+        controllerAs: 'artifact',
+        css: 'artifact.css'
       })
       .state('user', {
-        url:'/user/:id',
+        url: '/user/:id',
         templateUrl: 'app/user/user.html',
         controller: 'UserController',
         controllerAs: 'user'
-      });
+      })
 
     $urlRouterProvider.otherwise('/')
   }

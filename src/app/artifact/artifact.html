@@ -1,50 +1,82 @@
-<div>
-  <img src="/assets/placeholder.png">
-  <p>{{artifact.artifact.name}}</p>
-  <p>{{artifact.artifact.condition}}</p>
-  <p>Cause: {{artifact.artifact.cause.name}}</p>
-  <p>Current Highest: ${{artifact.highestBid}}</p>
-<div>
-<div ng-if="!artifact.userOwnsArtifact">
-  <form>
-    <input type="number" min="{{artifact.minBid}}" ng-model="artifact.userBid" />
-    <button ng-click="artifact.attemptPlaceBid()">Place Bid</button>
-  </form>
+<nav class="branch-nav">
+  <div class="row">
+    <span class="brand-text">Branches</span>
+    <input type="text" class="search-bar" placeholder="search for items" /> <span class="search-text">Search</span>
+    <ul class="main-nav">
+      <li><a ng-href="/">Home</a></li>
+      <li><a ui-sref="login">Login</a></li>
+      <li><a ui-sref="signup">Sign Up</a></li>
+      <li><a ui-sref="sell">Sell</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row main-page-content">
+<div class="card item-list item-list-artifact">
+  <div class="artifact-container">
+<div class="row">
+    <div class="col span-1-of-2">
+    <img class="artifact-image" src="http://lorempixel.com/300/300/cats/">
+  </div>
+  <div class="col span-1-of-2">
+    <h2 class="artifact-name">{{artifact.artifact.name}}</h2>
+    <p class="artifact-info">{{artifact.artifact.condition}}</p>
+    <p class="artifact-info">Cause: {{artifact.artifact.cause.name}}</p>
+    <p class="artifact-info">Current Highest: ${{artifact.highestBid}}</p>
+  <div ng-if="!artifact.userOwnsArtifact">
+    <form class="artifact-form">
+      <input type="number" min="{{artifact.minBid}}" ng-model="artifact.userBid" />
+      <button class="btn btn-full" ng-click="artifact.attemptPlaceBid()">Place Bid</button>
+    </form>
+  </div>
+  </div>
 </div>
-<div><!-- ng-if="artifact.userOwnsArtifact">-->
-  Current Offers
-  <ul>
-    <li ng-repeat="bid in artifact.bids">
-      <p>{{bid.bidder.name}}</p>
-      <p>${{bid.price}}</p>
-      <button>Accept</button>
-    </li>
-  </ul>
-</div>
-<div ng-if="!artifact.userOwnsArtifact">
-  <div>Other items you might like</div>
-  <div class="item-container">
-    <div class="col span-1-of-4 item-single" ng-repeat="artifact in artifact.otherArtifacts">
-      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      	<div class="flipper">
-      		<div class="front">
-            <div>
-              <img class="item-image" src="{{artifact.imgUrl}}">
-            </div>
-            <div class="item-name">
-              {{artifact.name}}
-            </div>
-      		</div>
-      		<div class="back card item-card">
-      			<p>
-              Condition: {{artifact.condition}}
-            </p>
-            <p>
-              Cause: {{artifact.cause.name}}
-            </p>
-      		</div>
-      	</div>
+  <div><!-- ng-if="artifact.userOwnsArtifact">-->
+    <div class="offer-list">
+      <h3 class="offers-heading">Current Offers</h3>
+      <div class="row" ng-repeat="bid in artifact.bids">
+        <div class="col span-1-of-3">
+          <div class="artifact-offer-profile">
+            <img class="artifact-offer-image" src="http://lorempixel.com/50/50/cats/" />
+            <div>{{bid.bidder.name}}</div>
+          </div>
+        </div>
+        <div class="col span-1-of-3">
+          <div>${{bid.price}}</div>
+        </div>
+        <div class="col span-1-of-3">
+            <button class="btn btn=full">Accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="other-items" ng-if="!artifact.userOwnsArtifact">
+    <h3 class="offers-heading">  Other items you might like
+</h3>
+    <div class="item-container">
+      <div class="col span-1-of-4 item-single" ng-repeat="artifact in artifact.otherArtifacts">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        	<div class="flipper">
+        		<div class="front">
+              <div>
+                <img class="item-image" src="http://lorempixel.com/150/150/cats/">
+              </div>
+              <div class="item-name">
+                {{artifact.name}}
+              </div>
+        		</div>
+        		<div class="back card item-card">
+        			<p>
+                Condition: {{artifact.condition}}
+              </p>
+              <p>
+                Cause: {{artifact.cause.name}}
+              </p>
+        		</div>
+        	</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+  </div>
