@@ -1,6 +1,6 @@
 .branch-nav {
   background-color: #27AE60;
-  height: 80px;
+  height: 65px;
 }
 .main-nav {
   margin-top: 20px;
@@ -51,16 +51,10 @@
 }
 
 .brand-text {
+  position: absolute;
+  transform: translateY(20%);
   padding: 8px 0;
+  font-family: 'Pacifico', cursive;
   font-size: 150%;
   color:#fff;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.3s;
-
-}
-
-.brand-text:hover,
-.brand-text:active{
- cursor: pointer;
- border-bottom: 2px solid #fff;
 }
