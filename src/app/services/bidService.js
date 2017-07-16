@@ -1,9 +1,9 @@
 angular.module('bidService', [])
-  .factory('bid', function($http) {
+  .factory('Bid', function($http) {
 
     // create a new object
     var bidFactory = {};
-    var bidRoute = "https://kitbackend.herokuapp.com/api/bids";
+    var bidRoute = "https://kitbackend.herokuapp.com/api/bid";
 
     // get a single bid
     bidFactory.get = function(id) {
@@ -17,8 +17,9 @@ angular.module('bidService', [])
 
     // create a bid
     bidFactory.create = function(bidData) {
-      console.log("attempting to create");
-      return $http.post(bidRoute + '/', bidData);
+      var aId = bidData.artifact_id;
+      var uId = bidData.user_id;
+      return $http.post("https://kitbackend.herokuapp.com/api/artifacts/" + aId + '/bid/' + uId, bidData);
     };
 
     // update a bid

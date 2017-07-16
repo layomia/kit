@@ -2,12 +2,24 @@
   <img src="/assets/placeholder.png">
   <p>{{artifact.artifact.name}}</p>
   <p>{{artifact.artifact.condition}}</p>
-  <p>Cause: </p>
-  <p>Current Highest:</p>
+  <p>Cause: {{artifact.artifact.cause.name}}</p>
+  <p>Current Highest: ${{artifact.highestBid}}</p>
 <div>
-
-<div ng-if="artifact.userOwnsArtifact">
+<div ng-if="!artifact.userOwnsArtifact">
+  <form>
+    <input type="number" min="{{artifact.minBid}}" ng-model="artifact.userBid" />
+    <button ng-click="artifact.attemptPlaceBid()">Place Bid</button>
+  </form>
+</div>
+<div><!-- ng-if="artifact.userOwnsArtifact">-->
   Current Offers
+  <ul>
+    <li ng-repeat="bid in artifact.bids">
+      <p>{{bid.bidder.name}}</p>
+      <p>${{bid.price}}</p>
+      <button>Accept</button>
+    </li>
+  </ul>
 </div>
 <div ng-if="!artifact.userOwnsArtifact">
   <div>Other items you might like</div>
@@ -29,9 +41,6 @@
             </p>
             <p>
               Cause: {{artifact.cause.name}}
-            </p>
-            <p>
-              Current highest: <!--come back to this -->
             </p>
       		</div>
       	</div>
