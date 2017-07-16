@@ -24,6 +24,29 @@ h1 {
   font-weight: 300;
 }
 
+h2 {
+  font-weight: 300;
+  font-size: 160%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 120%;
+  margin-bottom: 15px;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color:#27AE60;
+  content: "";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -57,4 +80,24 @@ h1 {
 .btn-ghost:hover,
 .btn-ghost:active {
   color: #fff;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 150%;
+}
+
+.icon-big {
+  font-size: 300%;
+  display: block;
+  color: #27AE60;
+  margin-bottom: 10px;
 }
