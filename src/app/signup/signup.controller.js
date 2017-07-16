@@ -11,6 +11,10 @@
     vm.registrationForm = {};
     vm.communities = {};
 
+    if (general.userLoggedIn()) {
+      $location.path("main");
+    }
+
     Community.all()
       .success(function(data) {
         for (var x in data) {

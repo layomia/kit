@@ -11,8 +11,12 @@ angular.module('userInfoService', [])
 		return user;
 	}
 
+	function destroy() {
+	}
+
 	return {
 		set: set,
 		get: get
+		destroy: destroy();
 	}
 });

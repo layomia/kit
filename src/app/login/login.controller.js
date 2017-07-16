@@ -10,6 +10,10 @@
     var vm = this;
     vm.loginForm = {};
 
+    if (general.userLoggedIn()) {
+      $location.path("main");
+    }
+
     vm.attemptLogin = function() {
       $auth.submitLogin(vm.loginForm)
         .then(function(resp) {
