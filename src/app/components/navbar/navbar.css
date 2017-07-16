@@ -1,3 +1,42 @@
 .acme-navbar-text {
   color: white;
 }
+
+.logo {
+  height: 50px;
+  margin-top: 15px;
+  width: auto;
+  float: left;
+}
+.branch-nav {
+  background-color: #27AE60;
+  height: 80px;
+}
+.main-nav {
+  margin-top: 20px;
+  float: right;
+  list-style: none;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+}
+
+.search-bar {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.search-text {
+  color: #fff;
+  margin-left: 10px;
+}
