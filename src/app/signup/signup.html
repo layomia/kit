@@ -1,20 +1,41 @@
-<div>
-  <form>
-    <div>
-      Full Name: <input type="text" ng-model="signup.registrationForm.name">
-    </div>
-    <div>
-      Email: <input type="email" ng-model="signup.registrationForm.email">
-    </div>
-    <div>
-      Password: <input type="password" ng-model="signup.registrationForm.password">
-    </div>
-    <div>
-      Password: <input type="password" ng-model="signup.registrationForm.password_confirmation">
-    </div>
-    <div>
-      Date of Birth: <input type="date" ng-model="signup.registrationForm.dateOfBirth">
-    </div>
-    <button ng-click="signup.attemptSignUp()">Sign Up</button>
-  </form>
+<nav class="branch-nav">
+  <div class="row">
+    <span class="brand-text">Branches</span>
+    <input type="text" class="search-bar" placeholder="search for items" /> <span class="search-text">Search</span>
+    <ul class="main-nav">
+      <li><a ng-href="/">Home</a></li>
+      <li><a ui-sref="login">Login</a></li>
+      <li><a ui-sref="signup">Sign Up</a></li>
+      <li><a ui-sref="sell">Sell</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="card card-form">
+    <h2 class="card-title">Sign Up</h2>
+    <form>
+      <div>
+        <h4 class="form-label">Full Name</h4>
+        <input type="text" ng-model="signup.registrationForm.name">
+      </div>
+      <div>
+        <h4 class="form-label">Email</h4>
+        <input type="email" ng-model="signup.registrationForm.email">
+      </div>
+      <div>
+        <h4 class="form-label">Password</h4>
+      <input type="password" ng-model="signup.registrationForm.password">
+      </div>
+      <div>
+        <h4 class="form-label">Password (again)</h4>
+      <input type="password" ng-model="signup.registrationForm.password_confirmation">
+      </div>
+      <div>
+        <h4 class="form-label">Date of Birth</h4>
+        <input type="date" ng-model="signup.registrationForm.dateOfBirth">
+      </div>
+      <button  class="btn btn-full" ng-click="signup.attemptSignUp()">Sign Up</button>
+    </form>
+  </div>
 </div>
