@@ -27,6 +27,18 @@
         controller: 'SignupController',
         controllerAs: 'signup'
       })
+      .state('main', {
+        url: '/main',
+        templateUrl: 'app/main/main.html',
+        controller: 'MainController',
+        controllerAs: 'main'
+      })
+      .state('sell', {
+        url: '/sell',
+        templateUrl: 'app/sell/sell.html',
+        controller: 'SellController',
+        controllerAs: 'sell'
+      });
 
     $urlRouterProvider.otherwise('/')
   }

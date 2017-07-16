@@ -6,7 +6,7 @@
     .controller('SplashController', SplashController);
 
   /** @ngInject */
-  function MainController($timeout) {
+  function SplashController($timeout) {
     var vm = this;
   }
 })();

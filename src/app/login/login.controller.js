@@ -6,7 +6,7 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($timeout, $auth) {
+  function LoginController($timeout, $auth, userInfo, $location) {
     var vm = this;
     vm.loginForm = {};
 
@@ -14,12 +14,12 @@
       $auth.submitLogin(vm.loginForm)
         .then(function(resp) {
           // handle success response
-          console.log(resp);
+          userInfo.set(resp);
+          $location.path("/main");
         })
         .catch(function(resp) {
           // handle error response
-          console.log(resp);
-          alert("Unable to log you in now! Try again later!")
+          alert("Unable to log you in now. Try again later!");
         });
     };
 
