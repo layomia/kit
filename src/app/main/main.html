@@ -4,7 +4,7 @@
   <h1 class="page-title">Recently posted items</h1>
   <div class="item-container">
     <div class="col span-1-of-4 item-single" ng-repeat="artifact in main.artifacts">
-      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flip-container" ng-click="main.goToArtifact(artifact.id)" ontouchstart="this.classList.toggle('hover');">
       	<div class="flipper">
       		<div class="front">
             <div>

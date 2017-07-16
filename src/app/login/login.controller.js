@@ -6,7 +6,7 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($timeout, $auth, userInfo, $location) {
+  function LoginController($timeout, $auth, userInfo, $location, general) {
     var vm = this;
     vm.loginForm = {};
 

@@ -23,5 +23,9 @@
         vm.artifacts = data;
         console.log(vm.artifacts);
       })
+
+    vm.goToArtifact = function(artifactId) {
+      $location.path("artifact/" + artifactId);
+    }
   }
 })()

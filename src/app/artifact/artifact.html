@@ -3,9 +3,10 @@
 <div class="card item-list item-list-artifact">
   <div class="artifact-container">
 <div class="row">
-    <div class="col span-1-of-2">
-    <img class="artifact-image" src="http://lorempixel.com/300/300/cats/">
-  </div>
+  <div class="col span-1-of-2">
+    <!--http://lorempixel.com/300/300/cats/-->
+    <img class="artifact-image" src="{{artifact.artifact.image_url}}">
+    </div>
   <div class="col span-1-of-2">
     <h2 class="artifact-name">{{artifact.artifact.name}}</h2>
     <p class="artifact-info">{{artifact.artifact.condition}}</p>
@@ -25,7 +26,7 @@
       <div class="row" ng-repeat="bid in artifact.bids">
         <div class="col span-1-of-3">
           <div class="artifact-offer-profile">
-            <img class="artifact-offer-image" src="http://lorempixel.com/50/50/cats/" />
+            <img class="artifact-offer-image" src="{{artifact.artifact.image_url}}" />
             <div>{{bid.bidder.name}}</div>
           </div>
         </div>
@@ -43,7 +44,7 @@
 </h3>
     <div class="item-container">
       <div class="col span-1-of-4 item-single" ng-repeat="artifact in artifact.otherArtifacts">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flip-container" ng-click="main.goToArtifact(artifact.id)" ontouchstart="this.classList.toggle('hover');">
         	<div class="flipper">
         		<div class="front">
               <div>

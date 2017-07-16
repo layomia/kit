@@ -6,7 +6,7 @@
     .controller('ArtifactController', ArtifactController);
 
   /** @ngInject */
-  function ArtifactController($timeout, $location, $stateParams, Artifact, userInfo, general, Bid) {
+  function ArtifactController($timeout, $location, $stateParams, $window, Artifact, userInfo, general, Bid) {
     if (!general.userLoggedIn()) {
       // display flash saying user must be logged in
       $location.path("/");
@@ -45,7 +45,7 @@
 
     vm.attemptPlaceBid = function() {
       console.log(vm.userBid, vm.minBid);
-      if (vm.userBid <= vm.minBid) {
+      if (vm.userBid < vm.minBid) {
         return;
       }
       var bidInfo = {
@@ -57,6 +57,8 @@
       Bid.create(bidInfo)
         .success(function(data) {
           console.log(data);
+          //$location.path("artifact/" + vm.artifactId);
+          $window.location.reload();
         })
         .error(function(data) {
           console.log(data);
@@ -76,6 +78,10 @@
 
       vm.minBid = vm.highestBid + 1;
       vm.userBid = vm.minBid;
+    }
+
+    vm.goToArtifact = function(artifactId) {
+      $location.path("artifact/" + artifactId);
     }
 
   }

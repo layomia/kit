@@ -6,7 +6,7 @@
     .controller('SignupController', SignupController);
 
   /** @ngInject */
-  function SignupController($timeout, $auth, $scope, Community, userInfo) {
+  function SignupController($timeout, $auth, $scope, Community, userInfo, general) {
     var vm = this;
     vm.registrationForm = {};
     vm.communities = {};

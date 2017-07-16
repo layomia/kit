@@ -1,6 +1,6 @@
 angular.module('userInfoService', [])
 
-.factory('userInfo', function($cookies) {
+.factory('userInfo', function($cookies, $location) {
 
 	function set(data) {
 		$cookies.putObject("currentUser", data);
@@ -12,6 +12,8 @@ angular.module('userInfoService', [])
 	}
 
 	function destroy() {
+		$cookies.remove("currentUser");
+		$location.path("/");
 	}
 
 	return {
