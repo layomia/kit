@@ -31,14 +31,15 @@
         url: '/main',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        css: 'main.css'
       })
       .state('sell', {
         url: '/sell',
         templateUrl: 'app/sell/sell.html',
         controller: 'SellController',
         controllerAs: 'sell'
-      });
+      })
 
     $urlRouterProvider.otherwise('/')
   }

@@ -1,28 +1,34 @@
-(function() {
-  'use strict';
+(function () {
+  'use strict'
 
   angular
     .module('kit')
-    .controller('MainController', MainController);
+    .controller('MainController', MainController)
 
   /** @ngInject */
-  function MainController($timeout, $auth, $location, general, userInfo) {
-    var vm = this;
+  function MainController ($timeout, $auth, $location, general, userInfo) {
+    var vm = this
 
     vm.artifacts = [
-      {"name":"xbox 360", "imgUrl":"placeholder.png"},
-      {"name":"ps4", "imgUrl":"placeholder.png"},
-      {"name":"shoes", "imgUrl":"placeholder.png"},
-      {"name":"mouse", "imgUrl":"placeholder.png"},
-      {"name":"laptop", "imgUrl":"placeholder.png"},
-      {"name":"bottle", "imgUrl":"placeholder.png"},
-    ];
+      {'name': 'xbox 360', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'ps4', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'shoes', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'mouse', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'laptop', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'ps4', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'shoes', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'mouse', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'shoes', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'mouse', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'laptop', 'imgUrl': 'http://via.placeholder.com/150x150'},
+      {'name': 'bottle', 'imgUrl': 'http://via.placeholder.com/150x150'}
+    ]
 
     if (!general.userLoggedIn()) {
       // flash message saying user isn't logged in
-      $location.path("/");
+      $location.path('/')
     }
 
-    //console.log(general.currentUser());
+    // console.log(general.currentUser());
   }
-})();
+})()
