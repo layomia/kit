@@ -1,0 +1,41 @@
+<div>
+  <img src="/assets/placeholder.png">
+  <p>{{artifact.artifact.name}}</p>
+  <p>{{artifact.artifact.condition}}</p>
+  <p>Cause: </p>
+  <p>Current Highest:</p>
+<div>
+
+<div ng-if="artifact.userOwnsArtifact">
+  Current Offers
+</div>
+<div ng-if="!artifact.userOwnsArtifact">
+  <div>Other items you might like</div>
+  <div class="item-container">
+    <div class="col span-1-of-4 item-single" ng-repeat="artifact in artifact.otherArtifacts">
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      	<div class="flipper">
+      		<div class="front">
+            <div>
+              <img class="item-image" src="{{artifact.imgUrl}}">
+            </div>
+            <div class="item-name">
+              {{artifact.name}}
+            </div>
+      		</div>
+      		<div class="back card item-card">
+      			<p>
+              Condition: {{artifact.condition}}
+            </p>
+            <p>
+              Cause: {{artifact.cause.name}}
+            </p>
+            <p>
+              Current highest: <!--come back to this -->
+            </p>
+      		</div>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
