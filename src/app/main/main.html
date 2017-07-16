@@ -1,23 +1,42 @@
-<div>
-  <div>
-    main page
-  </div>
-  <div>
-    <a ui-sref="sell">New Donation</a>
-  </div>
-
-  <div>
-    <ul>
-      <li ng-repeat="artifact in main.artifacts">
-        <div>
-          <img src="{{artifact.imgUrl}}">
-        </div>
-        <div>
-          {{artifact.name}}
-        </div>
-
-      </li>
+<nav class="branch-nav">
+  <div class="row">
+    <span class="brand-text">Branches</span>
+    <input type="text" class="search-bar" placeholder="search for items" /> <span class="search-text">Search</span>
+    <ul class="main-nav">
+      <li><a ng-href="/">Home</a></li>
+      <li><a ui-sref="login">Login</a></li>
+      <li><a ui-sref="signup">Sign Up</a></li>
+      <li><a ui-sref="sell">Sell</a></li>
     </ul>
   </div>
-
+</nav>
+<div class="card item-list">
+  <h1 class="page-title">Recently posted items</h1>
+  <div class="item-container">
+    <div class="col span-1-of-4 item-single" ng-repeat="artifact in main.artifacts">
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      	<div class="flipper">
+      		<div class="front">
+            <div>
+              <img class="item-image" src="{{artifact.imgUrl}}">
+            </div>
+            <div class="item-name">
+              {{artifact.name}}
+            </div>
+      		</div>
+      		<div class="back card item-card">
+      			<p>
+              Condition: Good
+            </p>
+            <p>
+              Cause: Planting Weed
+            </p>
+            <p>
+              Current highest: $100
+            </p>
+      		</div>
+      	</div>
+      </div>
+    </div>
+  </div>
 </div>

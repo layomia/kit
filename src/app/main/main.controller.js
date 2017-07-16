@@ -1,15 +1,16 @@
-(function() {
-  'use strict';
+(function () {
+  'use strict'
 
   angular
     .module('kit')
-    .controller('MainController', MainController);
+    .controller('MainController', MainController)
 
   /** @ngInject */
+
   function MainController($timeout, $auth, $location, general, userInfo, Community, Artifact) {
     if (!general.userLoggedIn()) {
       // flash message saying user isn't logged in
-      $location.path("/");
+      $location.path('/')
     }
 
     var vm = this;
@@ -23,4 +24,4 @@
         console.log(vm.artifacts);
       })
   }
-})();
+})()

@@ -31,7 +31,8 @@
         url: '/main',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        css: 'main.css'
       })
       .state('sell', {
         url: '/sell',

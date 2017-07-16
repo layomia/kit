@@ -1,0 +1,92 @@
+.item-list {
+  max-width: 1200px;
+  margin: 50px auto 50px auto;
+  height: 800px;
+  padding: 15px;
+}
+
+.page-title {
+  color: #000;
+  text-align: center;
+}
+
+.hack {
+  display: none;
+}
+
+.col {
+  margin-left: 0.6%;
+}
+
+.item-container {
+  margin:0 auto;
+  width: 900px;
+}
+
+.item-name {
+  font-size: 80%;
+  padding-left: 10px;
+}
+
+.item-single {
+  margin-bottom: 25px;
+}
+
+.item-image:hover {
+  cursor: pointer;
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+		cursor: pointer;
+	}
+
+.flip-container, .front, .back {
+	width: 150px;
+	height: 150px;
+	margin: 0 20px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.item-card {
+	padding: 15px;
+}
+
+.item-card p {
+	font-size: 70%;
+	margin-bottom: 10px;
+}
