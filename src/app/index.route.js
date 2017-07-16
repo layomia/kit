@@ -38,6 +38,12 @@
         templateUrl: 'app/sell/sell.html',
         controller: 'SellController',
         controllerAs: 'sell'
+      })
+      .state('artifact', {
+        url:'/artifact/:id',
+        templateUrl: 'app/artifact/artifact.html',
+        controller: 'ArtifactController',
+        controllerAs: 'artifact'
       });
 
     $urlRouterProvider.otherwise('/')

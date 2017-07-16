@@ -15,6 +15,11 @@ angular.module('artifactService', [])
       return $http.get(artifactRoute + '/');
     };
 
+    // get all artifacts for Community
+    artifactFactory.allForCommunity = function(id) {
+      return $http.get("https://kitbackend.herokuapp.com/api/community/" + id + "/artifacts");
+    }
+
     // create an artifact
     artifactFactory.create = function(artifactData) {
       console.log("attempting to create");

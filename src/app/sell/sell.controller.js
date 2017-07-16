@@ -21,8 +21,6 @@
     vm.attemptSale = function() {
       vm.sellForm.user_id = general.currentUser().id;
 
-      console.log(vm.sellForm);
-
       Artifact.create(vm.sellForm)
         .success(function(data) {
           console.log(data);

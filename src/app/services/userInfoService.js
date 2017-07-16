@@ -16,7 +16,7 @@ angular.module('userInfoService', [])
 
 	return {
 		set: set,
-		get: get
-		destroy: destroy();
+		get: get,
+		destroy: destroy
 	}
 });

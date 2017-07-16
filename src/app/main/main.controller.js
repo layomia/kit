@@ -6,23 +6,21 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, $auth, $location, general, userInfo) {
-    var vm = this;
-
-    vm.artifacts = [
-      {"name":"xbox 360", "imgUrl":"placeholder.png"},
-      {"name":"ps4", "imgUrl":"placeholder.png"},
-      {"name":"shoes", "imgUrl":"placeholder.png"},
-      {"name":"mouse", "imgUrl":"placeholder.png"},
-      {"name":"laptop", "imgUrl":"placeholder.png"},
-      {"name":"bottle", "imgUrl":"placeholder.png"},
-    ];
-
+  function MainController($timeout, $auth, $location, general, userInfo, Community, Artifact) {
     if (!general.userLoggedIn()) {
       // flash message saying user isn't logged in
       $location.path("/");
     }
 
-    //console.log(general.currentUser());
+    var vm = this;
+    vm.currentUser = general.currentUser();
+    vm.userCommunityId = vm.currentUser.community_id;
+    vm.artifacts = [];
+
+    Artifact.allForCommunity(vm.userCommunityId)
+      .success(function(data) {
+        vm.artifacts = data;
+        console.log(vm.artifacts);
+      })
   }
 })();
