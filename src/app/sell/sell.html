@@ -1,12 +1,29 @@
-<div>
-  <h1>What do you want to donate?</h1>
+<nav class="branch-nav">
+  <div class="row">
+    <span class="brand-text">Branches</span>
+    <input type="text" class="search-bar" placeholder="search for items" /> <span class="search-text">Search</span>
+    <ul class="main-nav">
+      <li><a ng-href="/">Home</a></li>
+      <li><a ui-sref="login">Login</a></li>
+      <li><a ui-sref="signup">Sign Up</a></li>
+      <li><a ui-sref="sell">Sell</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="card card-form">
+  <h2 class="card-title">What do you want to donate?</h2>
   <form>
     <div>
-      Title: <input type="text" ng-model="sell.sellForm.name">
+      <h4 class="form-label">Title</h4>
+      <input type="text" ng-model="sell.sellForm.name">
     </div>
     <div>
-      Condition: <input type="text" ng-model="sell.sellForm.condition">
+      <h4 class="form-label">Condition</h4>
+<input type="text" ng-model="sell.sellForm.condition">
     </div>
-    <button ng-click="sell.attemptSale()">Donate</button>
+    <button class="btn btn-full" ng-click="sell.attemptSale()">Donate</button>
   </form>
+</div>
 </div>
