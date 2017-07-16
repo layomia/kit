@@ -14,11 +14,12 @@
       $auth.submitRegistration(vm.registrationForm)
         .then(function(resp) {
           // handle success response
-          console.log(resp);
+          userInfo.set(resp);
+          $location.path("/main");
         })
         .catch(function(resp) {
           // handle error response
-          alert("Unable to log you in now! Try again later!")
+          alert("Unable to Sign you up now. Try again later!")
         });
     };
   }
