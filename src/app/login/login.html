@@ -1,11 +1,28 @@
-<div class="container">
+<nav class="branch-nav">
+  <div class="row">
+    <span class="brand-text">Branches</span>
+    <input type="text" class="search-bar" placeholder="search for items" /> <span class="search-text">Search</span>
+    <ul class="main-nav">
+      <li><a ng-href="/">Home</a></li>
+      <li><a ui-sref="login">Login</a></li>
+      <li><a ui-sref="signup">Sign Up</a></li>
+      <li><a ui-sref="sell">Sell</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row">
+  <div class="card card-form">
+    <h2 class="card-title">Login</h2>
   <form>
     <div>
-      Email: <input type="email" ng-model="login.loginForm.email">
+      <h4 class="form-label">Email</h4>
+       <input type="email" ng-model="login.loginForm.email">
     </div>
     <div>
-      Password: <input type="password" ng-model="login.loginForm.password">
+      <h4 class="form-label">Password</h4>
+       <input type="password" ng-model="login.loginForm.password">
     </div>
-    <button ng-click="login.attemptLogin()">Log In</button>
+    <button class="btn btn-full" ng-click="login.attemptLogin()">Log In</button>
   </form>
+</div>
 </div>

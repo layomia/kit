@@ -14,7 +14,7 @@ html {
 }
 
 .row {
-  max-width: 1140px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -22,6 +22,29 @@ h1 {
   margin: 0;
   font-size: 220%;
   font-weight: 300;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 160%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 120%;
+  margin-bottom: 15px;
+}
+
+.section h2:after {
+  display: block;
+  height: 2px;
+  background-color:#27AE60;
+  content: "";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .btn:link,
@@ -52,9 +75,84 @@ h1 {
 .btn:active {
   background-color: #027936;
   border: 1px solid #027936;
+  cursor: pointer;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
+  color: #fff;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 150%;
+}
+
+.icon-big {
+  font-size: 300%;
+  display: block;
+  color: #27AE60;
+  margin-bottom: 10px;
+}
+
+/* ----------------------------------- */
+/* card stuff */
+
+.card {
+  box-shadow: 10px 2px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-form {
+  margin: 50px auto 50px auto;
+  padding: 20px;
+  max-width: 700px;
+  border-radius: 10px;
+  color: #000;
+}
+
+.card form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.form-label {
+  font-weight: 300;
+  margin-bottom: 2px;
+}
+form input {
+    padding: 10px 0;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid #27AE60;
+    transition: border-bottom 0.5s;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  border-bottom: 2px solid #027936;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+  margin-right: 15px;
+  background-color: #27AE60;
+  border: 1px solid #27AE60;
   color: #fff;
 }
