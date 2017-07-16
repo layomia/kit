@@ -1,13 +1,13 @@
 angular.module('userInfoService', [])
 
-.factory('userInfo', function() {
-	var user = {};
+.factory('userInfo', function($cookies) {
 
 	function set(data) {
-		user = data;
+		$cookies.putObject("currentUser", data);
 	}
 
 	function get() {
+		var user = $cookies.getObject("currentUser") || {};
 		return user;
 	}
 

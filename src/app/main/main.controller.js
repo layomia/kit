@@ -8,6 +8,7 @@
   /** @ngInject */
   function MainController($timeout, $auth, $location, general, userInfo) {
     var vm = this;
+
     vm.artifacts = [
       {"name":"xbox 360", "imgUrl":"placeholder.png"},
       {"name":"ps4", "imgUrl":"placeholder.png"},

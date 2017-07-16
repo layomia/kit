@@ -11,7 +11,7 @@
     $logProvider.debugEnabled(true);
 
     $authProvider.configure({
-      apiUrl: 'https://kitbackend.herokuapp.com/api/',
+      apiUrl: 'https://kitbackend.herokuapp.com/api',
       tokenValidationPath:     '/auth/validate_token',
       signOutUrl:              '/auth/sign_out',
       emailRegistrationPath:   '/auth',

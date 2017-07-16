@@ -6,7 +6,12 @@
     .controller('SplashController', SplashController);
 
   /** @ngInject */
-  function SplashController($timeout) {
+  function SplashController($timeout, $location, general) {
     var vm = this;
+
+    if (general.userLoggedIn()) {
+      $location.path("main");
+    }
+
   }
 })();

@@ -19,7 +19,8 @@
         })
         .catch(function(resp) {
           // handle error response
-          alert("Unable to log you in now. Try again later!");
+          console.log(resp);
+          //alert("Unable to log you in now. Try again later!");
         });
     };
 

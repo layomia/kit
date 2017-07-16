@@ -6,7 +6,7 @@
     .controller('SignupController', SignupController);
 
   /** @ngInject */
-  function SignupController($timeout, $auth, $scope, Community) {
+  function SignupController($timeout, $auth, $scope, Community, userInfo) {
     var vm = this;
     vm.registrationForm = {};
     vm.communities = {};
@@ -28,6 +28,7 @@
         })
         .catch(function(resp) {
           // handle error response
+          console.log(resp);
           alert("Unable to Sign you up now. Try again later!")
         });
     };
