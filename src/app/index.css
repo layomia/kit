@@ -1,14 +1,60 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.thumbnail {
-  height: 200px;
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
 }
 
-.thumbnail img.pull-right {
-  width: 50px;
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 220%;
+  font-weight: 300;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  margin-right: 15px;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #27AE60;
+  border: 1px solid #27AE60;
+  color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #27AE60;
+  color: #27AE60;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #027936;
+  border: 1px solid #027936;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  color: #fff;
 }

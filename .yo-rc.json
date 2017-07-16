@@ -44,10 +44,6 @@
         "key": "bootstrap",
         "module": null
       },
-      "bootstrapComponents": {
-        "key": "ui-bootstrap",
-        "module": "ui.bootstrap"
-      },
       "cssPreprocessor": {
         "key": "noCssPrepro",
         "extension": "css"

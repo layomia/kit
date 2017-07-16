@@ -1,33 +1,33 @@
-(function() {
-  'use strict';
+(function () {
+  'use strict'
 
   angular
     .module('kit')
-    .config(routerConfig);
+    .config(routerConfig)
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
+  function routerConfig ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('splash', {
         url: '/',
         templateUrl: 'app/splash/splash.html',
         controller: 'SplashController',
-        controllerAs: 'splash'
+        controllerAs: 'splash',
+        css: 'splash.css'
       })
       .state('login', {
-        url:'/login',
+        url: '/login',
         templateUrl: 'app/login/login.html',
         controller: 'LoginController',
         controllerAs: 'login'
       })
       .state('signup', {
-        url:'/signup',
+        url: '/signup',
         templateUrl: 'app/signup/signup.html',
         controller: 'SignupController',
         controllerAs: 'signup'
-      });
+      })
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/')
   }
-
-})();
+})()
